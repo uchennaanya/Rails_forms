@@ -1,9 +1,12 @@
 <h1>Edit user...</h1>
 
-<%= form_for users_path do |f| %>
-    User name: <%= f.text_field :username, value: @user.username %><br />
-    email: <%= f.email_field :email, value: @user.email %><br />
-    password: <%= f.password_field :password, value: @user.password %><br />
-    <%= f.submit %>
-  <% end %>
+<%= form_for(@user) do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username, placeholder: "user" %>
+  <%= f.label :email %>
+  <%= f.email_field :email, placeholder: "john@doe.com "%>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <%= f.submit%>
+<% end %>
 
