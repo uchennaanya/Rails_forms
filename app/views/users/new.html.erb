@@ -18,16 +18,30 @@
   <%= email_field_tag(:email) %>
   <%= label_tag(:password, "Password") %>
   <%= password_field_tag(:password) %>
-  <%= submit_tag("Submit") %>
-  
+  <%= submit_tag("Submit") %> 
 <% end %>-->
 
 <%= form_for @user do |f| %>
+  <div>
   <%= f.label :username %>
+  </div>
+  <div>
   <%= f.text_field :username, placeholder: "user" %>
+  </div>
+  <br>
+  <div>
   <%= f.label :email %>
+  </div>
+  <div>
   <%= f.email_field :email, placeholder: "example@example.com"%>
+  </div>
+  <br>
+  <div>
   <%= f.label :password %>
+  </div>
+  <div>
   <%= f.password_field :password %>
+  </div>
+  <br>
   <%= f.submit :Submit%>
 <% end %>
