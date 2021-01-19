@@ -1,0 +1,28 @@
+<main>
+<h1>Welcome...</h1>
+<%= form_for @user do |f| %>
+  <div>
+  <%= f.label :username %>
+  </div>
+  <div>
+  <%= f.text_field :username, placeholder: "user" %>
+  </div>
+  <br>
+  <div>
+  <%= f.label :email %>
+  </div>
+  <div>
+  <%= f.email_field :email, placeholder: "example@example.com"%>
+  </div>
+  <br>
+  <div>
+  <%= f.label :password %>
+  </div>
+  <div>
+  <%= f.password_field :password %>
+  </div>
+  <br>
+  <%= f.submit :Submit%>
+<% end %>
+<p>&copy Microverse</p>
+</main>
